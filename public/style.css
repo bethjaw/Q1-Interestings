@@ -7,9 +7,25 @@
 .tile {
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 10px;
 }
 
 .columns {
   padding-left: 10px;
   padding-right: 10px;
+  /*border: 2px solid black;*/
+}
+
+.is-three-quarters {
+  /*border: 2px solid pink;*/
+
+}
+
+/*.favCol {
+border: 2px solid green;
+}*/
+
+.articleDiv {
+  /*border: 2px solid blue;*/
+  /*box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 2px 4px 4px 0 rgba(0, 0, 0, 0.19);*/
 }

@@ -24,12 +24,15 @@ catForm.addEventListener('submit', function(event){
 
       for(var i=0; i < catData.sources.length; i++){
         var catName = document.createElement('h2')
-        // catName.className =  "subtitle"
+        catName.className =  "subtitle"
         var catDescrip = document.createElement('p')
         var catLink = document.createElement('a')
-
         var catDiv = document.createElement('div')
-        catDiv.className = "column is-three-quarters"
+        catDiv.className = "column articleDiv"
+
+        var favSpan = document.createElement('span')
+        var favI = document.createElement('i')
+        var favLink = document.createElement('a')
 
         var catContent = document.getElementsByClassName('is-three-quarters')[0]
 
@@ -40,9 +43,18 @@ catForm.addEventListener('submit', function(event){
         catLink.target = "_blank"
         catLink.className = 'button is-primary is-outlined'
 
-        catDiv.append(catName, catDescrip, catLink)
+        favSpan.className = "icon is-small"
+        favI.className = "fa fa-heart"
+        // favLink.className = "level-item"
+        favLink.innerText = "Add to Favorites"
+        favLink.className = 'button is-primary is-outlined'
+        favLink.append(favSpan, favI)
 
+        catDiv.append(catName, catDescrip, catLink, favLink)
         catContent.append(catDiv)
+
+
+
       }
     })
   })
@@ -78,7 +90,7 @@ sourForm.addEventListener('submit', function(event){
         var artLink = document.createElement('a')
 
         var artDiv = document.createElement('div')
-        artDiv.className = "column is-three-quarters"
+        artDiv.className = "column articleDiv"
 
         var artContent = document.getElementsByClassName('is-three-quarters')[0]
 
@@ -94,7 +106,6 @@ sourForm.addEventListener('submit', function(event){
 
         artDiv.append(artTitle, artDescrip, artLink)
 
-
         artContent.append(artDiv)
 
       }
@@ -106,18 +117,19 @@ sourForm.addEventListener('submit', function(event){
 
 
 
-// var topForm = document.getElementById('topStoriesForm')
+// window.twttr = (function(d, s, id) {
+//   var js, fjs = d.getElementsByTagName(s)[0],
+//     t = window.twttr || {};
+//   if (d.getElementById(id)) return t;
+//   js = d.createElement(s);
+//   js.id = id;
+//   js.src = "https://platform.twitter.com/widgets.js";
+//   fjs.parentNode.insertBefore(js, fjs);
 //
-// topForm.addEventListener('submit', function(event){
-//   event.preventDefault()
-//   console.log(event)
+//   t._e = [];
+//   t.ready = function(f) {
+//     t._e.push(f);
+//   };
 //
-// fetch('https://newsapi.org/v1/source?sortBy=top&apiKey=8ff32c3c49ce4b68bc809217451302ef')
-// .then(function(response){
-//   return response.json()
-//   .then(function(topData){
-//     console.log(topData)
-//   })
-// })
-//
-// })
+//   return t;
+// }(document, "script", "twitter-wjs"));
