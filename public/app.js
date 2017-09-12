@@ -1,4 +1,5 @@
 console.log('hey')
+$(document).ready(function(){
 
 var catForm = document.getElementById('categoryForm')
 
@@ -33,6 +34,8 @@ catForm.addEventListener('submit', function(event){
         var favSpan = document.createElement('span')
         var favI = document.createElement('i')
         var favLink = document.createElement('a')
+        var favDiv = document.createElement('div')
+        favDiv.className = 'favBtn'
 
         var catContent = document.getElementsByClassName('is-three-quarters')[0]
 
@@ -47,10 +50,11 @@ catForm.addEventListener('submit', function(event){
         favI.className = "fa fa-heart"
         // favLink.className = "level-item"
         favLink.innerText = "Add to Favorites"
-        favLink.className = 'button is-primary is-outlined'
+        favLink.className = 'button is-danger is-outlined'
         favLink.append(favSpan, favI)
 
         catDiv.append(catName, catDescrip, catLink, favLink)
+        // favDiv.append(favLink)
         catContent.append(catDiv)
 
 
@@ -82,6 +86,7 @@ sourForm.addEventListener('submit', function(event){
 
       main.innerHTML = ''
 
+
       for(var i = 0; i < sourceData.articles.length; i++){
         var artTitle = document.createElement('h2')
         artTitle.className =  "subtitle"
@@ -92,10 +97,15 @@ sourForm.addEventListener('submit', function(event){
         var artDiv = document.createElement('div')
         artDiv.className = "column articleDiv"
 
+        var favSpan = document.createElement('span')
+        var favI = document.createElement('i')
+        var favLink = document.createElement('a')
+        var favDiv = document.createElement('div')
+        favDiv.className = 'favBtn'
+
         var artContent = document.getElementsByClassName('is-three-quarters')[0]
 
         artTitle.innerText = sourceData.articles[i].title
-        // artAuthor.innerText = sourceData.articles[i].author
         artDescrip.innerText = sourceData.articles[i].description
 
         artLink.innerText = "Read More"
@@ -103,10 +113,16 @@ sourForm.addEventListener('submit', function(event){
         artLink.target = "_blank"
         artLink.className = 'button is-primary is-outlined'
 
+        favSpan.className = "icon is-small"
+        favI.className = "fa fa-heart"
+        favLink.innerText = "Add to Favorites"
+        favLink.className = 'button is-danger is-outlined'
+        favLink.append(favSpan, favI)
 
-        artDiv.append(artTitle, artDescrip, artLink)
-
+        artDiv.append(artTitle, artDescrip, artLink, favLink)
+        // favDiv.append(favLink)
         artContent.append(artDiv)
+
 
       }
     })
@@ -116,20 +132,34 @@ sourForm.addEventListener('submit', function(event){
 
 
 
+$('.toggleBtn').click(function() {
+  event.preventDefault()
+  // console.log('clicked')
 
-// window.twttr = (function(d, s, id) {
-//   var js, fjs = d.getElementsByTagName(s)[0],
-//     t = window.twttr || {};
-//   if (d.getElementById(id)) return t;
-//   js = d.createElement(s);
-//   js.id = id;
-//   js.src = "https://platform.twitter.com/widgets.js";
-//   fjs.parentNode.insertBefore(js, fjs);
-//
-//   t._e = [];
-//   t.ready = function(f) {
-//     t._e.push(f);
-//   };
-//
-//   return t;
-// }(document, "script", "twitter-wjs"));
+      $('#tweets').toggleClass('hide')
+})
+
+
+
+
+// TWITTER STUFFFFF
+
+window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));
+
+
+})

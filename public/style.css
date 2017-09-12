@@ -16,16 +16,20 @@
   /*border: 2px solid black;*/
 }
 
-.is-three-quarters {
-  /*border: 2px solid pink;*/
+
+.hide {
+  display: none;
+}
+
+h1, h2 {
+  font-family: 'Lilita One', cursive;
+}
+
+.button {
+  font-family: 'Roboto', sans-serif;
 
 }
 
-/*.favCol {
-border: 2px solid green;
-}*/
-
-.articleDiv {
-  /*border: 2px solid blue;*/
-  /*box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 2px 4px 4px 0 rgba(0, 0, 0, 0.19);*/
+p, a {
+  font-family: 'Roboto', sans-serif;
 }

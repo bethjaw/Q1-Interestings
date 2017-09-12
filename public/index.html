@@ -6,19 +6,20 @@
     <link rel='stylesheet' href='style.css'>
     <link rel="stylesheet" href='bulma/css/bulma.css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lilita+One|Roboto" rel="stylesheet">
   </head>
 
   <body>
 
-      <section class="hero is-primary  is-bold">
+      <section class="hero is-primary is-medium is-bold">
         <div class="hero-body">
           <div class="container">
             <h1 class="title">
               Things are about to get Interesting...
             </h1>
-            <h2 class="subtitle">
+            <!-- <h2 class="subtitle">
               Primary subtitle
-            </h2>
+            </h2> -->
           </div>
         </div>
 
@@ -130,9 +131,18 @@
 
       <div class="tile is-parent">
           <section class="topStories tile is-child box">
-            <form id="topStoriesForm">
+
+            <form id="topStoriesForm" >
               <p class="label">The Latest From Twitter</p>
-              <button class="button is-dark" type='submit'>Get Curious</button>
+
+                <a class='clearBtn'>
+                <button class='button is-info is-outlined' type='submit' onclick=location=URL>Clear Some Space</button>
+                </a>
+
+                  <a class='toggleBtn'>
+                  <button class="button is-dark" type='submit'>Get Curious</button>
+                </a>
+
             </form>
           </section>
 
@@ -145,22 +155,17 @@
       <div  class="columns">
 
         <div class="column">
-          <!-- <figure class="image is-128x128">
-            <img src="IMG_2801.jpg">
-            </figure> -->
           </div>
 
         <div id='mainDiv' class="column is-three-quarters">
-        <!-- <a class="twitter-timeline" data-link-color="#19CF86" href="https://twitter.com/bmjaw/lists/interestings-app">A Twitter List by bmjaw</a> -->
+          <div id='tweets' class='hide'>
+            <a class="twitter-timeline" data-width="900" data-chrome="noheader nofooter" data-link-color="#19CF86" href="https://twitter.com/bmjaw/lists/interestings-app"></a>
         </div>
-
+        </div>
 
         <div class="column favCol">
-          <p>Add to Favorites</p>
-          <a class="level-item">
-            <span class="icon is-small"><i class="fa fa-heart"></i></span>
-          </a>
         </div>
+
       </div>
 
 
@@ -181,9 +186,12 @@
     </div>
   </footer>
 
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
 
       <script src='app.js'></script>
-
 
   </body>
 </html>
