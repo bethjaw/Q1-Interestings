@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Find An Interesting</title>
+    <link rel='stylesheet' href='style.css'>
+    <link rel="stylesheet" href='bulma/css/bulma.css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+
+      <section class="hero is-primary  is-bold">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Things are about to get Interesting...
+            </h1>
+            <h2 class="subtitle">
+              Primary subtitle
+            </h2>
+          </div>
+        </div>
+      </section>
+
+
+      <div class="tabs is-boxed">
+        <ul>
+          <li class="is-active">
+            <a>
+              <span>Search</span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <span>Favorites</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+
+
+    <div class="tile is-ancestor">
+      <div class="tile is-parent">
+          <section class="byCategory tile is-child box">
+            <form id="categoryForm">
+            <p class="label">Search for Sources by Category</p>
+
+              <div class='field'>
+                <div class="control">
+                  <div class="select">
+                    <select name='category'>
+                      <option>General</option>
+                      <option>Technology</option>
+                      <option>Business</option>
+                      <option>Sport</option>
+                      <option>Entertainment</option>
+                      <option>Gaming</option>
+                      <option value="Science-and-Nature">Science and Nature</option>
+                      <option>Music</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+            <button type='submit' class="button is-dark">Get Inspired</button>
+
+            </form>
+          </section>
+      </div>
+
+
+      <div class="tile is-parent">
+          <section class="byOutlet tile is-child box">
+
+            <form id="sourceForm">
+            <p class="label">Search Sources Directly</p>
+              <div class="field">
+                <div class="control">
+                  <div class="select">
+                    <select name='source'>
+                      <option>Choose a Source</option>
+                      <option value='ars-technica'>Ars Technica</option>
+                      <option value='associated-press'>Associated Press</option>
+                      <option value='bbc-news'>BBC News</option>
+                      <option>Bloomberg</option>
+                      <option value='business-insider'>Business Insider</option>
+                      <option>Buzzfeed</option>
+                      <option>CNBC</option>
+                      <option>CNN</option>
+                      <option value='daily-mail'>Daily Mail</option>
+                      <option>Engadget</option>
+                      <option value="entertainment-weekly">Entertainment Weekly</option>
+                      <option>ESPN</option>
+                      <option value='financial-times'>Financial Times</option>
+                      <option>Fortune</option>
+                      <option value='fox-sports'>Fox Sports</option>
+                      <option value='google-news'>Google News</option>
+                      <option value='hacker-news'>Hacker News</option>
+                      <option>Mashable</option>
+                      <option value='mtv-news'>MTV News</option>
+                      <option value='national-geographic'>National Geographic</option>
+                      <option>Newsweek</option>
+                      <option value='new-york-magazine'>New York Magazine</option>
+                      <option values='nfl-news'>NFL News</option>
+                      <option>Polygon</option>
+                      <option>Recode</option>
+                      <option value='reddit-r-all'>Reddit</option>
+                      <option>Reuters</option>
+                      <option>T3n</option>
+                      <option>TalkSport</option>
+                      <option>TechCrunch</option>
+                      <option>TechRadar</option>
+                      <option value='the-economist'>The Economist</option>
+                      <option value='the-huffington-post'>The Huffington Post</option>
+                      <option value='the-lad-bible'>The Lad Bible</option>
+                      <option values='the-new-york-times'>The New York Times</option>
+                      <option value='the-next-web'>The Next Web</option>
+                      <option value='the-sport-bible'>The Sport Bible</option>
+                      <option value='the-telegraph'>The Telegraph</option>
+                      <option value='the-verge'>The Verge</option>
+                      <option value='the-wall-street-journal'>The Wall Street Journal</option>
+                      <option value='the-washington-post'>The Washington Post</option>
+                      <option>Time</option>
+                      <option value='usa-today'>USA Today</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            <button type='submit' class="button is-dark">Get Updated</button>
+            </form>
+          </section>
+      </div>
+
+      <div class="tile is-parent">
+          <section class="topStories tile is-child box">
+            <form id="topStoriesForm">
+              <p class="label">The Latest From Twitter</p>
+              <button class="button is-dark" type='submit'>Get Curious</button>
+            </form>
+          </section>
+
+      </div>
+
+    </div>
+
+
+
+      <div class="columns">
+
+        <div id='mainDiv' class="column is-three-quarters"></div>
+
+        <div class="column">
+          <!-- <figure class="image is-128x128">
+            <img src="IMG_2801.jpg">
+            </figure> -->
+          </div>
+
+        <div class="column">Add to Favorites
+          <a class="level-item">
+            <span class="icon is-small"><i class="fa fa-heart"></i></span>
+          </a>
+        </div>
+      </div>
+
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Interestings</strong> by <a href="">Beth Jaworski</a>. &copy; September 2017
+        </p>
+        <p>
+          <a class="icon" href="https://github.com/bethjaw">
+            <i class="fa fa-github"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+      <script src='app.js'></script>
+
+  </body>
+</html>
