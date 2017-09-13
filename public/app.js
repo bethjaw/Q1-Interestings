@@ -25,45 +25,92 @@ catForm.addEventListener('submit', function(event){
 
       for(var i=0; i < catData.sources.length; i++){
         var catName = document.createElement('h2')
-        catName.className =  "subtitle"
+          catName.className =  "subtitle"
         var catDescrip = document.createElement('p')
         var catLink = document.createElement('a')
         var catDiv = document.createElement('div')
-        catDiv.className = "column articleDiv"
+          catDiv.className = "column articleDiv"
 
         var favSpan = document.createElement('span')
         var favI = document.createElement('i')
         var favLink = document.createElement('a')
-        var favDiv = document.createElement('div')
-        favDiv.className = 'favBtn'
 
         var catContent = document.getElementsByClassName('is-three-quarters')[0]
 
-        catName.innerText = catData.sources[i].name
-        catDescrip.innerText = catData.sources[i].description
-        catLink.innerText = "Browse Site"
-        catLink.setAttribute('href', catData.sources[i].url)
-        catLink.target = "_blank"
-        catLink.className = 'button is-primary is-outlined'
+          catName.innerText = catData.sources[i].name
+          catDescrip.innerText = catData.sources[i].description
+          catLink.innerText = "Browse Site"
+          catLink.setAttribute('href', catData.sources[i].url)
+          catLink.target = "_blank"
+          catLink.className = 'button is-primary is-outlined'
+
+
+        var tweetLink = document.createElement('a')
+          tweetLink.setAttribute('href', "https://twitter.com/intent/tweet?text=" + catLink)
+          catLink.target = "_blank"
+        var tweetI = document.createElement('i')
+          tweetI.className = "icon is-small fa fa-lg fa-twitter"
+          tweetI.style = "color: #55acee;"
+        var tweetSpan = document.createElement('span')
+          tweetSpan.className = 'icon is-small'
+
+          tweetLink.append(tweetSpan, tweetI)
+
+
+        var faceA = document.createElement('a')
+          faceA.setAttribute('href', "https://www.facebook.com/sharer/sharer.php?u=" + catLink)
+          faceA.target = "_blank"
+        var faceSpan = document.createElement('span')
+          faceSpan.className = 'icon is-small'
+
+        var faceI = document.createElement('i')
+          faceI.className = "icon fa fa-lg fa-facebook-square"
+          faceI.style = "color: #55acee;"
+
+          faceA.append(faceSpan, faceI)
+
+        var linkedA = document.createElement('a')
+          linkedA.setAttribute('href', "https://www.linkedin.com/shareArticle?mini=true&url=" + catLink)
+          linkedA.target = "_blank"
+        var linkedSpan = document.createElement('span')
+          linkedSpan.className = 'icon is-small'
+        var linkedI = document.createElement('i')
+          linkedI.className = "icon fa fa-lg fa-linkedin"
+          linkedI.style = "color: #55acee;"
+
+          linkedA.append(linkedSpan, linkedI)
+
+
+        var socialDiv = document.createElement('div')
+        socialDiv.className = 'canShare'
+        socialDiv.append(tweetLink, faceA, linkedA)
 
         favSpan.className = "icon is-small"
         favI.className = "fa fa-heart"
-        // favLink.className = "level-item"
+        // favLink.setAttribute('href', 'favs.html')
         favLink.innerText = "Add to Favorites"
         favLink.className = 'button is-danger is-outlined'
         favLink.append(favSpan, favI)
+        favLink.id = 'loveBtn'
 
-        catDiv.append(catName, catDescrip, catLink, favLink)
-        // favDiv.append(favLink)
+        catDiv.append(catName, catDescrip, catLink, favLink, socialDiv)
         catContent.append(catDiv)
 
 
 
+
+
+
+
       }
+
     })
+
   })
 
 })
+
+
 
 
 var sourForm = document.getElementById('sourceForm')
@@ -100,8 +147,6 @@ sourForm.addEventListener('submit', function(event){
         var favSpan = document.createElement('span')
         var favI = document.createElement('i')
         var favLink = document.createElement('a')
-        var favDiv = document.createElement('div')
-        favDiv.className = 'favBtn'
 
         var artContent = document.getElementsByClassName('is-three-quarters')[0]
 
@@ -120,7 +165,6 @@ sourForm.addEventListener('submit', function(event){
         favLink.append(favSpan, favI)
 
         artDiv.append(artTitle, artDescrip, artLink, favLink)
-        // favDiv.append(favLink)
         artContent.append(artDiv)
 
 
