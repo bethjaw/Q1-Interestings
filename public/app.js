@@ -132,7 +132,6 @@ sourForm.addEventListener('submit', function(event){
       for(var i = 0; i < sourceData.articles.length; i++){
         var artTitle = document.createElement('h2')
         artTitle.className =  "subtitle"
-        // var artAuthor = document.createElement('p')
         var artDescrip = document.createElement('p')
         var artLink = document.createElement('a')
 
@@ -207,7 +206,15 @@ sourForm.addEventListener('submit', function(event){
         artContent.append(artDiv)
 
 
+        favLink.onclick = function(element){
+          console.log(artDiv)
+          window.localStorage.setItem('articleLove', artDiv)
+          var articleToSave = localStorage.getItem('articleLove')
+          console.log(articleToSave)
+        }
+
       }
+
     })
   })
 
