@@ -44,7 +44,7 @@ catForm.addEventListener('submit', function(event){
           catLink.target = "_blank"
           catLink.className = 'button is-primary is-outlined'
 
-
+      // SOCIAL BUTTONS
         var tweetLink = document.createElement('a')
           tweetLink.setAttribute('href', "https://twitter.com/intent/tweet?text=" + catLink)
           catLink.target = "_blank"
@@ -80,11 +80,11 @@ catForm.addEventListener('submit', function(event){
 
           linkedA.append(linkedSpan, linkedI)
 
-
         var socialDiv = document.createElement('div')
         socialDiv.className = 'canShare'
         socialDiv.append(tweetLink, faceA, linkedA)
 
+    // FAVORITE BUTTON
         favSpan.className = "icon is-small"
         favI.className = "fa fa-heart"
         // favLink.setAttribute('href', 'favs.html')
@@ -95,11 +95,6 @@ catForm.addEventListener('submit', function(event){
 
         catDiv.append(catName, catDescrip, catLink, favLink, socialDiv)
         catContent.append(catDiv)
-
-
-
-
-
 
 
       }
@@ -158,13 +153,57 @@ sourForm.addEventListener('submit', function(event){
         artLink.target = "_blank"
         artLink.className = 'button is-primary is-outlined'
 
+
+
+    // SOCIAL BUTTONS
+
+        var tweetLink = document.createElement('a')
+          tweetLink.setAttribute('href', "https://twitter.com/intent/tweet?text=" + artLink)
+          artLink.target = "_blank"
+        var tweetI = document.createElement('i')
+          tweetI.className = "icon is-small fa fa-lg fa-twitter"
+          tweetI.style = "color: #55acee;"
+        var tweetSpan = document.createElement('span')
+          tweetSpan.className = 'icon is-small'
+
+          tweetLink.append(tweetSpan, tweetI)
+
+
+        var faceA = document.createElement('a')
+          faceA.setAttribute('href', "https://www.facebook.com/sharer/sharer.php?u=" + artLink)
+          faceA.target = "_blank"
+        var faceSpan = document.createElement('span')
+          faceSpan.className = 'icon is-small'
+
+        var faceI = document.createElement('i')
+          faceI.className = "icon fa fa-lg fa-facebook-square"
+          faceI.style = "color: #55acee;"
+
+          faceA.append(faceSpan, faceI)
+
+        var linkedA = document.createElement('a')
+          linkedA.setAttribute('href', "https://www.linkedin.com/shareArticle?mini=true&url=" + artLink)
+          linkedA.target = "_blank"
+        var linkedSpan = document.createElement('span')
+          linkedSpan.className = 'icon is-small'
+        var linkedI = document.createElement('i')
+          linkedI.className = "icon fa fa-lg fa-linkedin"
+          linkedI.style = "color: #55acee;"
+
+          linkedA.append(linkedSpan, linkedI)
+
+        var socialDiv = document.createElement('div')
+        socialDiv.className = 'canShare'
+        socialDiv.append(tweetLink, faceA, linkedA)
+
+    // FAVORITE BUTTONS
         favSpan.className = "icon is-small"
         favI.className = "fa fa-heart"
         favLink.innerText = "Add to Favorites"
         favLink.className = 'button is-danger is-outlined'
         favLink.append(favSpan, favI)
 
-        artDiv.append(artTitle, artDescrip, artLink, favLink)
+        artDiv.append(artTitle, artDescrip, artLink, favLink, socialDiv)
         artContent.append(artDiv)
 
 
