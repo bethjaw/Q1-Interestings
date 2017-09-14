@@ -19,7 +19,7 @@ catForm.addEventListener('submit', function(event){
   .then(function(response){
     return response.json()
     .then(function(catData){
-      console.log(catData)
+      // console.log(catData)
 
       main.innerHTML = ''
 
@@ -30,6 +30,7 @@ catForm.addEventListener('submit', function(event){
         var catLink = document.createElement('a')
         var catDiv = document.createElement('div')
           catDiv.className = "column articleDiv"
+          catDiv.id = 'addDiv'
 
         var favSpan = document.createElement('span')
         var favI = document.createElement('i')
@@ -85,17 +86,34 @@ catForm.addEventListener('submit', function(event){
         socialDiv.append(tweetLink, faceA, linkedA)
 
     // FAVORITE BUTTON
-        favSpan.className = "icon is-small"
-        favI.className = "fa fa-heart"
+        // favSpan.className = "icon is-small"
+        // favI.className = "fa fa-heart"
         // favLink.setAttribute('href', 'favs.html')
-        favLink.innerText = "Add to Favorites"
-        favLink.className = 'button is-danger is-outlined'
-        favLink.append(favSpan, favI)
-        favLink.id = 'loveBtn'
+        // favLink.innerText = "Add to Favorites"
+        // favLink.className = 'button is-danger is-outlined'
+        // favLink.append(favSpan, favI)
+        // favLink.id = 'add'
 
         catDiv.append(catName, catDescrip, catLink, favLink, socialDiv)
         catContent.append(catDiv)
+
+        // favLink.onclick = function () {
+        // location.href = "favs.html";
+        //   };
+
       }
+
+              // $('#add').click(function(){
+
+              // var addingFavorite = $('#addDiv').html()
+              // // console.log(addingFavorite)
+              // JSON.stringify(addingFavorite)
+
+              //   var newFav = $('#addDiv').html();
+              //   localStorage.setItem('newFavDiv', newFav);
+              //   return false;
+              // })
+
 
     })
 
@@ -121,7 +139,7 @@ sourForm.addEventListener('submit', function(event){
   .then(function(response){
     return response.json()
     .then(function(sourceData){
-      console.log(sourceData)
+      // console.log(sourceData)
 
       main.innerHTML = ''
 
@@ -134,6 +152,7 @@ sourForm.addEventListener('submit', function(event){
 
         var artDiv = document.createElement('div')
         artDiv.className = "column articleDiv"
+        artDiv.id = 'addDiv'
 
         var favSpan = document.createElement('span')
         var favI = document.createElement('i')
@@ -193,22 +212,19 @@ sourForm.addEventListener('submit', function(event){
         socialDiv.append(tweetLink, faceA, linkedA)
 
     // FAVORITE BUTTONS
-        favSpan.className = "icon is-small"
-        favI.className = "fa fa-heart"
-        favLink.innerText = "Add to Favorites"
-        favLink.className = 'button is-danger is-outlined'
-        favLink.append(favSpan, favI)
+        // favSpan.className = "icon is-small"
+        // favI.className = "fa fa-heart"
+        // favLink.innerText = "Add to Favorites"
+        // favLink.className = 'button is-danger is-outlined'
+        // favLink.id = 'add'
+        // favLink.append(favSpan, favI)
 
         artDiv.append(artTitle, artDescrip, artLink, favLink, socialDiv)
         artContent.append(artDiv)
 
-
-        favLink.onclick = function(element){
-          console.log(artDiv)
-          window.localStorage.setItem('articleLove', artDiv)
-          var articleToSave = localStorage.getItem('articleLove')
-          console.log(articleToSave)
-        }
+        // favLink.onclick = function () {
+        // location.href = "favs.html";
+        //   };
 
       }
 

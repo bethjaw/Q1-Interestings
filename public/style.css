@@ -55,3 +55,9 @@ p, a {
   text-align: center;
   margin: 15px;
 }
+
+.topBtn {
+  float: right;
+  margin-right: 10px;
+  margin-top: 10px;
+}

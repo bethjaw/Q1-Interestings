@@ -1,1 +1,4 @@
-window.localStorage.getItem('articleLove')
+
+// if(localStorage.getItem('newFavDiv')) {
+//   $('#addDiv').html(localStorage.getItem('newFavDiv'));
+// }
