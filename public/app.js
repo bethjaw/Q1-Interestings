@@ -95,8 +95,6 @@ catForm.addEventListener('submit', function(event){
 
         catDiv.append(catName, catDescrip, catLink, favLink, socialDiv)
         catContent.append(catDiv)
-
-
       }
 
     })
@@ -104,7 +102,6 @@ catForm.addEventListener('submit', function(event){
   })
 
 })
-
 
 
 
