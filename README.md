@@ -30,4 +30,4 @@ A few features of this app include:
 *Ability to scroll through a newsfeed when looking for a general update (no specific source or category of interest)
 *Share an interesting article or source to Twitter, Facebook or LinkedIn
 
-###Stay curious!
+### Stay curious!
