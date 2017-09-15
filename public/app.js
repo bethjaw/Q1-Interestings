@@ -26,8 +26,10 @@ catForm.addEventListener('submit', function(event){
       for(var i=0; i < catData.sources.length; i++){
         var catName = document.createElement('h2')
           catName.className =  "subtitle"
+          catName.id = 'favSource'
         var catDescrip = document.createElement('p')
         var catLink = document.createElement('a')
+          catLink.id = 'favSourceLink'
         var catDiv = document.createElement('div')
           catDiv.className = "column articleDiv"
           catDiv.id = 'addDiv'
@@ -103,16 +105,21 @@ catForm.addEventListener('submit', function(event){
 
       }
 
-              // $('#add').click(function(){
-
-              // var addingFavorite = $('#addDiv').html()
-              // // console.log(addingFavorite)
-              // JSON.stringify(addingFavorite)
-
-              //   var newFav = $('#addDiv').html();
-              //   localStorage.setItem('newFavDiv', newFav);
-              //   return false;
-              // })
+      //         $('#add').click(function(){
+      //
+      //           var newFav = $('#favSource').html();
+      //           localStorage.setItem('newFavArt', newFav);
+      //
+      //           return false;
+      //         })
+      //
+      //
+      // var allTitles = document.querySelectorAll('#titleID')
+      // for (var i = 0; i < allTitles.length; i++) {
+      //   allTitles[i].addEventListener('click', function(event) {
+      //     movieArr.push(this.innerHTML)
+      //     event.stopPropagation()
+      //     window.localStorage.setItem('title', movieArr);
 
 
     })
